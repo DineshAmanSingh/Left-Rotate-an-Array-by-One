@@ -1,0 +1,22 @@
+#include <stdio.h>
+leftRotateByOneArray(int arr[],int n)
+{
+   int i;
+   int temp=arr[0];
+   for(i=0;i<=n-1;i++)
+      arr[i]=arr[i+1];
+   arr[n-1]=temp;
+}
+int main() {
+   int i,num,arr[50];
+   printf("Enter size of array \n");
+   scanf("%d",&num);
+   printf("Enter element in array\n");
+   for(i=0;i<=num-1;i++)
+   scanf("%d",&arr[i]);
+   leftRotateByOneArray(arr,num);
+   printf("Left Rotate By One Array is...");
+   for(i=0;i<=num-1;i++)
+   printf("\n%d",arr[i]);
+   return 0;
+}
